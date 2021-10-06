@@ -1,7 +1,7 @@
 import {Schema, model, Types} from 'mongoose'
 
 const blogSchema = new Schema({
-  user: {type: Types.ObjectId, ref: 'user'},
+  user: {type: Types.ObjectId, ref: 'User'},
   title: {
     type: String,
     require: true,
