@@ -1,4 +1,5 @@
 import {Document} from 'mongoose'
+import { Request } from 'express'
 
 export interface IUser extends Document {
   name: string
@@ -21,4 +22,23 @@ export interface IDecodedToken {
   newUser?: INewUser
   iat: number,
   exp: number
+}
+
+export interface IGgPayload {
+  email: string
+  email_verified: boolean
+  name: string
+  picture: string
+}
+
+export interface IUserParams {
+  name: string
+  account: string
+  password: string
+  avatar?: string
+  type: string
+}
+
+export interface IReqAuth extends Request {
+  user?: IUser
 }

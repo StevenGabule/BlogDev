@@ -21,6 +21,9 @@ app.use(cookieParser())
 
 // Routes
 app.use('/api/auth', routes.authRouter)
+app.use('/api/user', routes.userRouter)
+app.use('/api/category', routes.categoryRouter)
+app.use('/api/blog', routes.blogRouter)
 
 // server listening
 const PORT = process.env.PORT || 5000
