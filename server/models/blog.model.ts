@@ -1,4 +1,5 @@
 import {Schema, model, Types} from 'mongoose'
+import { IBlog } from '../config/interface'
 
 const blogSchema = new Schema({
   user: {type: Types.ObjectId, ref: 'User'},
@@ -30,4 +31,4 @@ const blogSchema = new Schema({
   timestamps: true
 })
 
-export default model('blog', blogSchema)
+export default model<IBlog>('blog', blogSchema)
